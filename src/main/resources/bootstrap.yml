@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: eureka-service
+  cloud:
+    config:
+      uri: http://config-service:8888
+
+---
+# "local" 프로필 활성화 시 적용될 설정
+spring:
+  config:
+    activate:
+      on-profile: local
+  cloud:
+    config:
+      enabled: false
